@@ -5,7 +5,7 @@ import os
 import sys
 userpath = os.path.expanduser("~")
 
-def main(): # test
+def main():
     while True or False: 
         try:
             wd_string = os.getcwd()
@@ -30,14 +30,11 @@ def main(): # test
             # after checking all reserved commands, it tries to run command as program
             else:
                 try:
-                    proc = subprocess.Popen(commandlist, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+                    proc = subprocess.Popen(commandlist, stdin=subprocess.PIPE)
                 except: 
                     print("that didnt work :(")
                     continue
-                proc.stdin.close()
-                output = proc.stdout.read()
                 proc.wait()
-                print(output.decode(), end="")
         except:
             print("woah something went REALLY wrong")
 
