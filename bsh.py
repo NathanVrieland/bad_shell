@@ -5,7 +5,7 @@ import os
 import sys
 userpath = os.path.expanduser("~")
 
-def main():
+def main(): # test
     while True or False: 
         try:
             wd_string = os.getcwd()
